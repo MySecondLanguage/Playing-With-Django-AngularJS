@@ -4,25 +4,26 @@
 
   <div class="form-group">
     <label for="userid">USER ID :</label>
-    DigitsOnly<br/><input ng-model="userid" restrict-input="{type: 'digitsOnly'}"/>
+    DigitsOnly<br/><input ng-model="formModel.userid" restrict-input="{type: 'digitsOnly'}"/>
   </div>
 
   <div class="form-group">
     <label for="name">NAME :</label>
-    lettersOnly<br/><input ng-model="name" restrict-input="{type: 'lettersOnly'}"/>
+    lettersOnly<br/><input ng-model="formModel.name" restrict-input="{type: 'lettersOnly'}"/>
   </div>
 
   <div class="form-group">
     <label for="email">Email :</label> <br>
-    <input ng-model="email">
+    <input ng-model="formModel.email">
   </div>
 
   <div class="form-group">
     <label for="phone">Phone :</label> <br>
-    <input ng-model="phone">
+    <input ng-model="formModel.phone">
   </div>
 
-  <button class="btn btn-primary" ng-click="PassDataToDisplyThroughUrl()">Submit</button>
+  <button class="btn btn-primary" ng-click="onSubmit()">Submit</button> <br>
+  <br>
 
 </form>
 
