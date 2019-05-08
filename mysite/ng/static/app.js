@@ -3,8 +3,8 @@ var app = angular.module("app", ["ngRoute", "ui.router"]);
 
 app.config(['$routeProvider', '$stateProvider', '$urlRouterProvider',  function($routeProvider, $stateProvider, $urlRouterProvider) {
     $routeProvider
-    .when('/sumurl/:id/:name', { 
-        templateUrl: 'static/display.html',
+    .when('/sumurl/:userid/:name/:email/:phone', {
+        templateUrl: 'static/templates/display.html',
         controller: 'display'
     })
 
@@ -15,7 +15,7 @@ app.config(['$routeProvider', '$stateProvider', '$urlRouterProvider',  function(
 
     $stateProvider.state('filter', {
         url: '/filter',
-        templateUrl: 'static/filter.html',
+        templateUrl: 'static/templates/filter.html',
         controller: 'filterCtrl'
     });
 
@@ -23,12 +23,12 @@ app.config(['$routeProvider', '$stateProvider', '$urlRouterProvider',  function(
         url: '/input',
         views:{
             '':{
-                templateUrl: 'static/default.html',
+                templateUrl: 'static/templates/default.html',
                 controller: 'default',
             },
 
             'inputView':{
-                templateUrl: 'static/input.html',
+                templateUrl: 'static/templates/input.html',
                 controller: 'inputCtrl',
             }
         }

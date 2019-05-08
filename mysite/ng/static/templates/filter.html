@@ -1,0 +1,26 @@
+<strong>Boom ! The data appeared via rest api and filtered with angular in name Order</strong> <br>
+<br>
+
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">NAME</th>
+      <th scope="col">email</th>
+      <th scope="col">phone</th>
+      <th scope="col">address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="contact in contacts | orderBy : 'name' ">
+      <td>{{ contact.id }}</td>
+      <td>{{ contact.name }}</td>
+      <td>{{ contact.email }}</td>
+      <td>{{ contact.phone }}</td>
+      <td>{{ contact.address }}</td>
+
+    </tr>
+  </tbody>
+</table>
+

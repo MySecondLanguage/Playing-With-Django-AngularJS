@@ -1,10 +1,7 @@
-app.controller('filterCtrl', function($scope) {
-    $scope.names = [
-        {id:1,name:'b'},
-        {id:2,name:'c'},
-        {id:3,name:'a'}
-        ];
-    $scope.orderByMe = function(x) {
-        $scope.myOrderBy = x;
-    }
+
+app.controller('filterCtrl', function($scope, $http) {
+  $http.get("http://127.0.0.1:8000/api/v1/contact/?format=json")
+  .then(function(response) {
+      $scope.contacts = response.data;
+  });
 });
